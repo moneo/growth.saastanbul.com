@@ -1,0 +1,1215 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-touch-fullscreen" content="yes">
+    <meta name="HandheldFriendly" content="True">
+
+    <meta name="description"
+          content="SaaS alanındaki son gelişmeleri yakından takip etmek, zorlukları ve fırsatları keşfetmek, ilham verici konuşmacılarla tanışmak ve sektör profesyonelleriyle bağlantı kurmak için bu heyecan verici etkinliği kaçırmayın."/>
+
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="theme-color" content="#ffffff">
+
+    <meta property="og:locale" content="tr_TR"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:title" content="SaaStanbul 2023"/>
+    <meta property="og:description" content="SaaStanbul 2023 - 12 Temmuz 2023 Bahçeşehir Üniversitesi"/>
+    <meta property="og:url" content="https://saastanbul.com/"/>
+    <meta property="og:site_name" content="SaaStanbul 2023"/>
+    <meta property="og:image" content="/images/og-image.png"/>
+
+    <meta name="twitter:card" content="summary_large_image"/>
+    <meta name="twitter:image" content="/images/og-image.png"/>
+    <meta name="twitter:description" content="SaaStanbul 2023 - 12 Temmuz 2023 Bahçeşehir Üniversitesi"/>
+    <meta name="twitter:title" content="SaaStanbul 2023"/>
+
+    <title>SaaStanbul 2023</title>
+
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@17.8.3/dist/lazyload.min.js"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              main: {
+                0: '#FEFEFF',
+                700: '#9CA1AB',
+                800: '#4C4F57',
+                900: '#121723',
+              },
+              sea: {
+                50: '#F1FDFF',
+                100: '#D7EBF4',
+                200: '#C5EFF6',
+                300: '#7DC7FF',
+                400: '#55ACEE',
+              },
+              mid: {
+                600: '#18223A',
+                700: '#232835',
+                800: '#101420',
+                900: '#080E1D',
+              },
+              sup: {
+                700: '#006B7D',
+                800: '#0058AC',
+                900: '#104C85',
+              },
+              grey: {
+                100: '#EEEEEE',
+                200: '#D8D8D8',
+                300: '#B1B1B1',
+                400: '#8A8A8A',
+                500: '#646464',
+                600: '#474747',
+                700: '#353535',
+                800: '#242424',
+                900: '#121212',
+              },
+              azul: {
+                100: '#E9EFFD',
+                200: '#CFDCFB',
+                300: '#9EBAF6',
+                400: '#6E97F2',
+                500: '#3D74ED',
+                600: '#2158D1',
+                700: '#19429D',
+                800: '#102C68',
+                900: '#081634',
+              }
+            },
+            fontFamily: {
+              'sans': ['Maven Pro', 'sans-serif'],
+            },
+            borderRadius: {},
+            letterSpacing: {
+              primary: '-0.6px',
+              secondary: '-0.03em',
+            }
+          }
+        }
+      }
+    </script>
+
+    <style type="text/tailwindcss">
+        @layer components {
+            html {
+                scroll-behavior: smooth;
+            }
+
+            .section-container {
+                @apply max-w-[1216px] mx-auto;
+            }
+
+            .nav-item {
+                @apply text-base text-main-900 font-medium tracking-primary;
+            }
+
+            .page-title {
+                @apply lg:text-[76px] text-[38px] lg:leading-[120%] leading-[46px] text-center tracking-secondary;
+
+                background: linear-gradient(180deg, #184C57 0%, #121723 100%);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                background-clip: text;
+                text-fill-color: transparent;
+            }
+
+            h2 {
+                @apply lg:text-[32px] lg:leading-9 text-2xl text-main-900 font-medium tracking-secondary;
+            }
+
+            .bg-sky-border-gradient {
+                background: linear-gradient(360deg, rgba(65, 228, 255, 0) 0%, rgba(65, 228, 255, 0.5) 49.79%, rgba(65, 228, 255, 0) 100%), radial-gradient(50% 50% at 50% 50%, #CEF1F7 0%, rgba(206, 241, 247, 0) 100%);
+            }
+
+            .speaker-card {
+                @apply lg:max-w-[182px] lg:w-full max-w-[147px];
+            }
+
+            .organizer-card {
+                @apply lg:max-w-[319px] lg:w-full max-w-[147px];
+            }
+
+            :is(.speaker-card, .organizer-card) .social-box {
+                @apply absolute inset-0 flex items-center justify-center lg:gap-x-4 gap-x-2 lg:mx-0 mx-3 bg-azul-800 bg-opacity-70 transition-all ease-in-out duration-150;
+            }
+
+            :is(.speaker-card, .organizer-card) .title {
+                @apply mt-3 text-base text-main-0 text-center font-medium tracking-primary;
+            }
+
+            :is(.speaker-card, .organizer-card) .desc {
+                @apply mt-1 text-xs text-main-700 text-center tracking-secondary lg:px-4 px-1;
+            }
+
+            .organizer-card .avatar {
+                @apply w-full lg:h-[180px] lg:object-cover;
+            }
+
+            .schedule-title {
+                @apply text-xl text-azul-500 font-semibold text-center max-w-[550px] w-full whitespace-nowrap;
+            }
+
+            .schedule-list {
+                @apply pt-12 max-w-[154px] w-full;
+            }
+
+            .schedule-card {
+                @apply flex flex-col items-center justify-center bg-white rounded-xl text-lg text-main-900 font-medium tracking-secondary text-center lg:mt-0 mt-4;
+
+                box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.06);
+            }
+
+            .schedule-card.empty {
+                @apply min-h-[108px]
+            }
+
+            .schedule-card .title {
+                @apply p-4 border-b border-[#F6F6F7] min-h-[88px] flex items-center justify-center;
+            }
+
+            .schedule-card .speaker-box {
+                @apply text-base py-4 flex items-center justify-center gap-x-2;
+            }
+
+            .schedule-card .speaker-box .avatar {
+                @apply rounded-full h-6 w-6;
+            }
+
+            .schedule-time {
+                @apply flex items-center lg:text-lg text-base lg:text-main-900 text-azul-500 font-medium tracking-secondary even:text-main-700;
+            }
+
+            .tweet-card {
+                @apply p-6 bg-white border border-azul-100 rounded-2xl lg:max-w-[344px] max-w-[278px] flex-shrink-0;
+
+                box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.06);
+            }
+
+            .sponsor-card {
+                @apply flex items-center justify-center lg:py-10 py-8 rounded-xl bg-main-900;
+
+                box-shadow: 0px 1px 3px rgba(16, 24, 40, 0.1), 0px 1px 2px rgba(16, 24, 40, 0.06);
+            }
+
+            .sponsor-card.diamond {
+                @apply bg-mid-700;
+            }
+
+            .faq-item {
+                @apply p-6;
+            }
+
+            .faq-item:not(.active) {
+                @apply cursor-pointer;
+            }
+
+            .faq-item.active {
+                @apply bg-[#F7F9FC];
+            }
+
+            .faq-item.active .icon {
+                @apply rotate-180
+            }
+
+            .faq-item.active .desc {
+                @apply block;
+            }
+
+            faq-item .icon {
+                @apply transform ease-in-out duration-150;
+            }
+
+            .faq-item .title {
+                @apply lg:text-lg text-base text-main-900 font-medium tracking-secondary;
+            }
+
+            .faq-item .desc {
+                @apply hidden mt-4 text-base text-main-900 tracking-secondary pr-10;
+            }
+
+            .gradient-border {
+                border-image: linear-gradient(0deg, rgba(16, 76, 133, 0) 0%, #0058AC 100%) 1;
+                border-width: 1px;
+                border-style: solid;
+            }
+        }
+    </style>
+</head>
+
+<body class="lg:px-0 px-4">
+<div id="app">
+    <!-- NAVIGATION -->
+    <div class="lg:mx-0 -mx-4 border-b border-sea-50" style="box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.06)">
+        <nav class="section-container flex items-center justify-between lg:py-6 lg:px-0 p-4">
+            <a href="index.html">
+                <img src="/logo.svg" class="lg:max-w-full max-w-[128px]" alt="">
+            </a>
+            <div class="lg:flex hidden items-center gap-x-10">
+                <a href="#konuşmacılar" class="nav-item">
+                    Konuşmacılar
+                </a>
+                <a href="#program" class="nav-item">
+                    Program
+                </a>
+                <a href="#sponsorlar" class="nav-item">
+                    Sponsorlar
+                </a>
+                <a href="#biletler" class="nav-item">
+                    Biletler
+                </a>
+                <a href="#sss" class="nav-item">
+                    S.S.S
+                </a>
+                <a style="display: none;" href="#organizatörler" class="nav-item">
+                    Organizatörler
+                </a>
+            </div>
+            <a target="_blank" href="https://kommunity.com/saastanbul/events/saastanbul-2023-101374c0/tickets"
+               class="lg:inline-block hidden rounded-lg py-2 px-6 text-base text-main-900 border border-sea-200 font-medium"
+               style="background: linear-gradient(90deg, #F1FCFF 0%, #EFFFFD 100%); box-shadow: 0px 1px 3px rgba(238, 255, 254, 0.25), 0px 0.5px 0.5px rgba(238, 255, 254, 0.25)">
+                Bilet satın al
+            </a>
+            <button class="lg:hidden block" @click="showMobileMenu">
+                <img src="/icons/menu-icon.svg" alt="">
+            </button>
+        </nav>
+    </div>
+
+    <div id="mobile-menu" class="fixed inset-0 z-[999] bg-white" style="display: none" v-show="isMenuOpen">
+        <div class="flex justify-between items-center p-4 border-b border-sea-50">
+            <img src="/logo.svg" class="lg:w-auto max-w-[128px] lazy" alt="">
+
+            <button class="relative" @click="hideMobileMenu">
+                <img src="/icons/x-icon.svg" class="lazy" alt="">
+            </button>
+        </div>
+        <div class="p-6">
+            <div class="space-y-6">
+                <a href="#konuşmacılar" class="block text-2xl text-grey-800 font-medium tracking-secondary"
+                   @click="hideMobileMenu">
+                    Konuşmacılar
+                </a>
+                <a href="#program" class="block text-2xl text-grey-800 font-medium tracking-secondary"
+                   @click="hideMobileMenu">
+                    Program
+                </a>
+                <a href="#sponsorlar" class="block text-2xl text-grey-800 font-medium tracking-secondary"
+                   @click="hideMobileMenu">
+                    Sponsorlar
+                </a>
+                <a href="#bilerler" class="block text-2xl text-grey-800 font-medium tracking-secondary"
+                   @click="hideMobileMenu">
+                    Biletler
+                </a>
+                <a href="#sss" class="block text-2xl text-grey-800 font-medium tracking-secondary"
+                   @click="hideMobileMenu">
+                    S.S.S
+                </a>
+                <a href="#organizatörler" class="block text-2xl text-grey-800 font-medium tracking-secondary"
+                   @click="hideMobileMenu">
+                    Organizatörler
+                </a>
+            </div>
+            <a href=""
+               class="mt-10 block rounded-lg py-3 text-xl text-main-900 text-center tracking-secondary border border-sea-200 font-medium"
+               style="background: linear-gradient(90deg, #F1FCFF 0%, #EFFFFD 100%); box-shadow: 0px 1px 3px rgba(238, 255, 254, 0.25), 0px 0.5px 0.5px rgba(238, 255, 254, 0.25)">
+                Bilet satın al
+            </a>
+        </div>
+    </div>
+
+    <!-- HERO -->
+    <div class="relative lg:pt-20 pt-16 lg:mx-0 -mx-4 lg:px-0 px-4">
+        <img src="/images/hero-bg.png" class="lg:block hidden absolute top-0 left-1/2 transform -translate-x-1/2"
+             alt="">
+        <img src="/images/mobile-hero-bg.png"
+             class="lg:hidden block absolute top-0 left-1/2 transform -translate-x-1/2 w-full" alt="">
+
+        <div class="relative z-10">
+            <div class="max-w-[800px] mx-auto">
+                <h1 class="page-title"><span class="font-semibold">SaaS</span>tanbul 2023</h1>
+                <p class="lg:mt-6 mt-4 lg:text-2xl text-lg text-main-800 text-center tracking-primary">
+                    SaaS alanındaki son gelişmeleri yakından takip etmek, zorlukları ve fırsatları keşfetmek, ilham
+                    verici konuşmacılarla tanışmak ve sektör profesyonelleriyle bağlantı kurmak için bu heyecan
+                    verici etkinliği kaçırmayın.
+                </p>
+            </div>
+            <div
+                    class="lg:mt-24 mt-10 flex lg:flex-row flex-col items-center gap-x-10 gap-y-3 max-w-[967px] mx-auto lg:px-0 px-2">
+                <div class="text-center">
+                    <div class="text-base text-main-800">Tarih</div>
+                    <div
+                            class="mt-1 lg:text-2xl text-xl lg:leading-8 leading-6 text-main-900 font-medium tracking-primary">
+                        13 Temmuz
+                    </div>
+                </div>
+                <div class="lg:w-px w-full lg:h-[60px] h-px bg-sky-border-gradient"></div>
+                <div class="text-center">
+                    <div class="text-base text-main-800">Mekan</div>
+                    <div
+                            class="mt-1 lg:text-2xl text-xl lg:leading-8 leading-6 text-main-900 font-medium tracking-primary underline">
+                        Bahçeşehir Üniversitesi Beşiktaş Güney Kampüsü
+                    </div>
+                    <div class="mt-2.5 lg:flex hidden items-center justify-center gap-x-4">
+                        <img src="/images/bau-hub.png" alt="">
+                        <div class="text-sm text-main-900 tracking-primary">Bahçeşehir Üniversitesi Kuluçka Merkezi
+                            BAU Hub işbirliğiyle
+                        </div>
+                    </div>
+                </div>
+                <div class="lg:w-px w-full lg:h-[60px] h-px bg-sky-border-gradient"></div>
+                <div class="text-center">
+                    <div class="text-base text-main-800">Şehir</div>
+                    <div
+                            class="mt-1 lg:text-2xl text-xl lg:leading-8 leading-6 text-main-900 font-medium tracking-primary">
+                        İstanbul
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- SPEAKERS -->
+    <div class="relative lg:mt-12 mt-20 section-container">
+        <div id="konuşmacılar"></div>
+        <div class="relative z-10 lg:px-10 px-6 lg:pb-10 pb-6 border border-sup-700 rounded-3xl"
+             style="background: linear-gradient(180deg, #121723 42.71%, #18223A 100%);">
+            <div class="relative z-10 max-w-[1134px] mx-auto">
+                <img src="/images/speakers-top.png" class="lg:block hidden absolute -top-[26px] w-full" alt="">
+                <img src="/images/mobile-speakers-top.png" class="lg:hidden block absolute -top-[26px] w-full"
+                     alt="">
+
+                <img src="/images/speakers-top-gradient.png"
+                     class="lg:block hidden absolute z-10 top-0 left-1/2 transform -translate-x-1/2 mix-blend-color-dodge"
+                     alt="">
+                <img src="/images/mobile-speakers-top-gradient.png"
+                     class="lg:hidden block absolute z-10 top-0 left-1/2 transform -translate-x-1/2 w-full mix-blend-color-dodge"
+                     alt="">
+                <img src="/images/speakers-lines.png" class="absolute left-1/2 transform -translate-x-1/2 h-full"
+                     alt="">
+
+                <div class="bg-mid-900 rounded-b-xl lg:pt-20 pt-10 lg:pb-24 pb-14 lg:px-16">
+                    <div class="relative z-10 max-w-[384px] mx-auto lg:px-0 px-4">
+                        <h2 class="text-main-0 text-center">Konuşmacılar</h2>
+                        <p class="mt-3 lg:text-xl text-base text-main-700 text-center tracking-secondary">İlham verici konuşmacılar ve sektör profesyonelleriyle tanışın</p>
+                    </div>
+                    <div
+                            class="lg:mt-16 mt-6 flex flex-wrap lg:justify-start justify-center md:gap-x-6 md:gap-y-12 gap-y-4">
+                        <div class="speaker-card" v-for="speaker in findSpeakers()">
+                            <div class="relative group rounded-lg overflow-hidden lg:px-0 px-3">
+                                <img :src="speaker.avatar" class="lazy" alt="{{ speaker.name }}">
+                                <div
+                                        class="social-box opacity-0 group-hover:opacity-100 invisible group-hover:visible">
+                                    <a :href="speaker.social_networks.twitter" target="_blank">
+                                        <img src="/icons/twitter-icon.svg" class="lazy" alt="">
+                                    </a>
+                                    <a :href="speaker.social_networks.linkedin" target="_blank">
+                                        <img src="/icons/linkedin-icon.svg" class="lazy" alt="">
+                                    </a>
+                                </div>
+                            </div>
+                            <h3 class="title">{{ speaker.name }}</h3>
+                            <p class="desc">{{ speaker.bio }}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <img src="/images/speakers-bottom-gradient.png"
+                 class="lg:block hidden absolute z-0 bottom-0 left-1/2 transform -translate-x-1/2 lazy mix-blend-color-dodge"
+                 alt="">
+        </div>
+    </div>
+
+    <!-- SCHEDULE -->
+    <div class="section-container lg:mt-[120px] mt-20 lg:mx-auto -mx-4">
+        <div id="program"></div>
+        <h2 class="lg:text-left text-center">Etkinlik Programı</h2>
+        <div class="lg:mt-10 mt-8">
+            <div class="flex items-center gap-x-8 lg:justify-end w-full overflow-x-auto lg:px-0 px-4">
+                <div class="schedule-title">MRR salonu</div>
+                <div class="schedule-title">ACV salonu</div>
+            </div>
+            <div class="lg:hidden block mt-6">
+                <div class="flex overflow-x-auto px-4">
+                    <div class="flex gap-x-6 bg-sea-50 rounded-2xl p-4 flex-shrink-0">
+                        <div v-for="(track, trackIndex) in tracks" :key="`track-${trackIndex}`"
+                             class="space-y-4 max-w-[310px]">
+                            <div v-for="(session, sessionIndex) in track.sessions.slice(0,5)"
+                                 :key="`track-${trackIndex}-${sessionIndex}`">
+                                <div class="schedule-time">{{session.start}} - {{session.end}}</div>
+                                <div v-for="(talk, talkIndex) in session.talks"
+                                     :key="`track-${trackIndex}-${sessionIndex}-${talkIndex}`" class="schedule-card">
+                                    <div class="title">
+                                        {{talk.title}}
+                                    </div>
+                                    <div v-if="talk.speakers.length > 0" class="speaker-box px-8">
+                                        <img :src="getSpeaker(talk.speakers[0]).avatar" class="avatar lazy" alt="">
+                                        <div>
+                                            <span class="font-medium">{{getSpeaker(talk.speakers[0]).name}}</span>
+                                            ({{getSpeaker(talk.speakers[0]).title}})
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="mt-4 flex justify-center">
+                    <a href="schedule.html" class="flex items-center gap-x-2">
+                        <span class="text-base text-main-900 font-medium tracking-secondary">Devamını Gör</span>
+                        <img src="/icons/arrow-down-icon.svg" class="lazy" alt="">
+                    </a>
+                </div>
+            </div>
+
+            <div class="mt-6 lg:flex hidden">
+
+                <div class="flex-1">
+                    <div class="relative bg-sea-50 rounded-2xl p-4 ">
+                        <img src="/images/schedule-gradient.png"
+                             class="absolute top-0 right-0 lazy mix-blend-color-dodge" alt="">
+                        <div class="relative z-10 grid grid-cols-12 gap-4">
+
+                            <div v-for="(session, sessionIndex) in sessions.slice(0,5)" :key="`talk-${sessionIndex}`"
+                                 class="relative col-span-12 grid grid-cols-12 gap-4">
+                                <div class="h-full flex items-center absolute left-[-150px] top-0 z-10">
+                                    <div class="schedule-time">
+                                        {{session.start}} - {{session.end}}
+                                    </div>
+                                </div>
+                                <div v-for="(talk, talkIndex) in session.talks"
+                                     :key="`talk-${sessionIndex}-${talkIndex}`" class="schedule-card row-span-1"
+                                     :class="{'col-span-6': session.talks.length === 2, 'col-span-12': session.talks.length === 1}">
+                                    <div class="title">
+                                        {{talk.title}}
+                                    </div>
+                                    <div v-if="talk.speakers.length > 0" class="speaker-box">
+                                        <img :src="getSpeaker(talk.speakers[0]).avatar" class="avatar lazy" alt="">
+                                        <div>
+                                            <span class="font-medium">{{getSpeaker(talk.speakers[0]).name}}</span>
+                                            ({{getSpeaker(talk.speakers[0]).title}})
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="absolute left-0 right-0 bottom-0 w-full h-[160px]"
+                                 style="background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #FFFFFF 100%);">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mt-6 flex justify-center">
+                        <a href="schedule.html" class="flex items-center gap-x-2">
+                            <span class="text-base text-main-900 font-medium tracking-secondary">Devamını Gör</span>
+                            <img src="/icons/arrow-down-icon.svg" class="lazy" alt="">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- TICKETS -->
+    <div class="mt-[120px]">
+        <div id="biletler"></div>
+        <div class="max-w-[384px] mx-auto lg:px-0 px-10">
+            <h2 class="text-center">Biletler</h2>
+            <p class="lg:mt-3 mt-4 lg:text-xl text-base text-main-700 text-center tracking-secondary">Standart tek tip bilet tipi, tüm konferans oturumlarına katılım için geçerli</p>
+        </div>
+        <div class="lg:mt-10 mt-8">
+            <img src="/images/tickets-top.png" class="lg:block hidden mx-auto lazy" alt="">
+            <div class="relative bg-mid-900 rounded-2xl max-w-[800px] mx-auto">
+                <img src="/images/tickets-gradient.png"
+                     class="lg:block hidden absolute left-0 lazy mix-blend-color-dodge" alt="">
+                <img src="/images/mobile-tickets-gradient.png"
+                     class="lg:hidden block absolute -top-4 -left-4 lazy mix-blend-color-dodge" alt="">
+
+                <div class="relative z-10 lg:p-10 p-8 flex lg:flex-row flex-col items-center gap-x-12">
+                    <div class="lg:max-w-[200px] w-full">
+                        <div class="lg:text-base text-sm text-[#00C4E4] font-medium tracking-secondary">STANDART
+                        </div>
+                        <div
+                                class="lg:text-5xl text-2xl lg:leading-[60px] text-main-0 lg:font-semibold font-medium lg:tracking-secondary tracking-primary">
+                            950 TL
+                        </div>
+                        <a href="https://kommunity.com/saastanbul/events/saastanbul-2023-101374c0/tickets" target=""
+                           class="mt-5 lg:block hidden bg-main-0 rounded-lg py-2 text-base text-main-900 text-center font-medium tracking-primary"
+                           style="box-shadow: 0px 1px 3px rgba(238, 255, 254, 0.25), 0px 0.5px 0.5px rgba(238, 255, 254, 0.25), inset 0px 0.5px 0.5px #EEFFFE, inset 0px 0.5px 0.5px #EEFFFE;">
+                            Satın al
+                        </a>
+                    </div>
+                    <ul
+                            class="lg:mt-0 mt-4 lg:text-base text-xs text-main-700 lg:tracking-primary tracking-secondary space-y-3">
+                        <li class="flex items-center gap-x-3">
+                            <span class="h-1.5 w-1.5 rounded-full bg-azul-100"></span>
+                            <span class="flex-1">Tüm oturumlara katılım hakkı</span>
+                        </li>
+                        <li class="flex items-center gap-x-3">
+                            <span class="h-1.5 w-1.5 rounded-full bg-azul-100"></span>
+                            <span class="flex-1">Fuar alanına erişim hakkı</span>
+                        </li>
+                        <li class="flex items-center gap-x-3">
+                            <span class="h-1.5 w-1.5 rounded-full bg-azul-100"></span>
+                            <span class="flex-1">Networking etkinliklerine katılım hakkı</span>
+                        </li>
+                    </ul>
+                    <a href=""
+                       class="mt-6 lg:hidden block w-full bg-main-0 rounded-lg py-2 text-base text-main-900 text-center font-medium tracking-primary"
+                       style="box-shadow: 0px 1px 3px rgba(238, 255, 254, 0.25), 0px 0.5px 0.5px rgba(238, 255, 254, 0.25), inset 0px 0.5px 0.5px #EEFFFE, inset 0px 0.5px 0.5px #EEFFFE;">
+                        Satın al
+                    </a>
+                </div>
+            </div>
+            <img src="/images/tickets-bottom.png" class="lg:block hidden mx-auto -mt-3 lazy" alt="">
+        </div>
+    </div>
+
+    <!-- TWEETS -->
+    <div class="lg:mt-[144px] mt-[120px] section-container relative rounded-3xl bg-[#F7F9FC] border border-azul-100 lg:pl-20 lg:pr-16 lg:py-0 p-8 overflow-hidden"
+         style="box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.06);">
+        <img src="/images/tweets-bg.png" class="lg:block hidden absolute left-0 bottom-0 lazy" alt="">
+        <img src="/images/mobile-tweets-bg.png" class="lg:hidden block absolute left-0 top-4 lazy" alt="">
+
+        <div class="relative z-10 flex lg:flex-row flex-col items-center lg:gap-x-14">
+            <div class="lg:max-w-[304px] w-full">
+                <h2>Hashtag #saastanbul23</h2>
+                <p class="lg:mt-4 mt-2 lg:text-xl text-base text-main-800 tracking-secondary">
+                    Twitter’da <span class="text-azul-600 font-medium">#saastanbul23</span> etiketiyle paylaşım
+                    yapabilir, etkinlik hallerinizi paylaşabilirsiniz.
+                </p>
+                <a href="http://twitter.com/" target="_blank"
+                   class="inline-block mt-6 text-base text-main-0 font-medium tracking-primary py-2 px-4 rounded-lg border border-sea-200"
+                   style="background: linear-gradient(90deg, #55ACEE 0%, #7DC7FF 100%);box-shadow: 0px 1px 3px rgba(238, 255, 254, 0.25), 0px 0.5px 0.5px rgba(238, 255, 254, 0.25);">
+                    Tweetle
+                </a>
+            </div>
+            <div class="lg:flex hidden gap-x-6">
+                <div class="space-y-6 lg:max-h-[340px] overflow-auto">
+                    <div v-for="(tweet, tweetIndex) in tweets[0]" :key="`tweets-1-${tweetIndex}`" class="tweet-card">
+                        <div class="flex justify-between gap-x-3">
+                            <div class="flex items-center gap-x-3">
+                                <img :src="tweet.avatar" class="h-10 w-10 rounded-full lazy" alt="">
+                                <div class="text-[#383A3D]">
+                                    <div class="text-base font-medium">{{tweet.name}}</div>
+                                    <div class="text-xs">@{{tweet.username}}</div>
+                                </div>
+                            </div>
+                            <img src="/icons/twiter-blue-icon.svg" class="lazy" alt="">
+                        </div>
+                        <p class="mt-3 text-sm text-main-800">
+                            {{tweet.content}}
+                        </p>
+                        <div class="mt-3 text-xs text-[#6A6B6E]">
+                            {{tweet.time}}
+                        </div>
+                    </div>
+                </div>
+                <div class="space-y-6 lg:max-h-[340px] overflow-auto">
+                    <div v-for="(tweet, tweetIndex) in tweets[1]" :key="`tweets-1-${tweetIndex}`" class="tweet-card">
+                        <div class="flex justify-between gap-x-3">
+                            <div class="flex items-center gap-x-3">
+                                <img :src="tweet.avatar" class="h-10 w-10 rounded-full lazy" alt="">
+                                <div class="text-[#383A3D]">
+                                    <div class="text-base font-medium">{{tweet.name}}</div>
+                                    <div class="text-xs">@{{tweet.username}}</div>
+                                </div>
+                            </div>
+                            <img src="/icons/twiter-blue-icon.svg" class="lazy" alt="">
+                        </div>
+                        <p class="mt-3 text-sm text-main-800">
+                            {{tweet.content}}
+                        </p>
+                        <div class="mt-3 text-xs text-[#6A6B6E]">
+                            {{tweet.time}}
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-8 lg:hidden flex gap-x-4 overflow-x-auto">
+                <div v-for="(tweet, tweetIndex) in tweets[0]" :key="`tweets-m-${tweetIndex}`" class="tweet-card">
+                    <div class="flex justify-between gap-x-3">
+                        <div class="flex items-center gap-x-3">
+                            <img :src="tweet.avatar" class="h-10 w-10 rounded-full lazy" alt="">
+                            <div class="text-[#383A3D]">
+                                <div class="text-base font-medium">{{tweet.name}}</div>
+                                <div class="text-xs">@{{tweet.username}}</div>
+                            </div>
+                        </div>
+                        <img src="/icons/twiter-blue-icon.svg" class="lazy" alt="">
+                    </div>
+                    <p class="mt-3 text-sm text-main-800">
+                        {{tweet.content}}
+                    </p>
+                    <div class="mt-3 text-xs text-[#6A6B6E]">
+                        {{tweet.time}}
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="lg:block hidden absolute z-50 top-0 left-0 right-0 h-14 w-full"
+             style="background: linear-gradient(180deg, #F7F9FC 0%, rgba(247, 249, 252, 0) 100%);"></div>
+        <div class="lg:block hidden absolute z-50 bottom-0 left-0 right-0 h-14 w-full"
+             style="background: linear-gradient(0deg, #F7F9FC 0%, rgba(247, 249, 252, 0) 100%);"></div>
+    </div>
+
+    <!-- SPONSORS -->
+    <div class="mt-[120px] section-container">
+        <div id="sponsorlar"></div>
+        <div class="relative z-10 lg:p-10 lg:pb-0 p-8 pb-0 border border-sup-700 rounded-3xl overflow-hidden"
+             style="background: linear-gradient(180deg, #101420 42.71%, #18223A 100%);box-shadow: 0px 12px 16px -4px rgba(0, 85, 255, 0.08), 0px 4px 6px -2px rgba(0, 85, 255, 0.03), 0px 1px 2px rgba(16, 24, 40, 0.06);">
+            <img src="/images/sponsors-first-top-gradient.png"
+                 class="lg:block hidden absolute z-10 top-0 left-1/2 transform -translate-x-1/2 lazy mix-blend-color-dodge"
+                 alt="">
+            <img src="/images/mobile-sponsors-first-top-gradient.png"
+                 class="lg:hidden block absolute z-10 top-0 left-1/2 transform -translate-x-1/2 lazy mix-blend-color-dodge"
+                 alt="">
+
+            <div class="relative z-10 max-w-[1134px] mx-auto rounded-t-xl overflow-hidden">
+                <img src="/images/sponsors-top-gradient.png"
+                     class="lg:block hidden absolute z-50 top-0 left-1/2 transform -translate-x-1/2 w-full lazy mix-blend-color-dodge"
+                     alt="">
+                <img src="/images/mobile-sponsors-top-gradient.png"
+                     class="lg:hidden block absolute z-50 top-0 left-1/2 transform -translate-x-1/2 w-full lazy mix-blend-color-dodge"
+                     alt="">
+
+                <img src="/images/speakers-lines.png"
+                     class="absolute left-1/2 transform -translate-x-1/2 h-full lazy" alt="">
+                <img src="/images/sponsors-bottom-gradient.png"
+                     class="lg:block hidden absolute bottom-0 left-1/2 transform -translate-x-1/2 lazy mix-blend-color-dodge"
+                     alt="">
+
+                <div
+                        class="relative bg-mid-900 lg:pt-20 lg:pb-24 lg:px-16 pt-10 pb-6 gradient-border overflow-hidden">
+                    <img src="/images/sponsors-gradient.png"
+                         class="lg:block hidden absolute top-0 left-0 z-0 mix-blend-color-dodge" alt="">
+
+                    <div class="relative z-50">
+                        <div class="lg:px-0 px-4 max-w-[592px] mx-auto">
+                            <h2 class="text-main-0 text-center">Sponsorlar</h2>
+                            <p
+                                    class="mt-5 lg:text-xl text-base lg:text-main-0 text-main-700 text-center lg:tracking-secondary tracking-primary">
+                                SaaStanbul 2023’e sponsor olmak için <br> <a href="to:info@saastanbul.com"
+                                                                             class="text-azul-500">info@saastanbul.com</a>
+                                adresinden iletişime geçebilirsiniz.
+                            </p>
+                        </div>
+                        <div class="relative lg:mt-20 mt-14 lg:px-0 px-5">
+                            <img src="/images/mobile-sponsors-gradient1.png"
+                                 class="lg:hidden block absolute left-0 -top-24 w-full mix-blend-color-dodge" alt="">
+
+                            <div class="relative z-10">
+                                <h3 class="text-xl text-sea-100 font-medium text-center">Elmas Sponsorlar</h3>
+                                <div class="lg:mt-6 mt-4 grid lg:grid-cols-3 grid-cols-1 gap-x-6 gap-y-4">
+                                    <a v-for="(sponsor, sponsorIndex) in sponsors.filter(s => s.category === 'Elmas')"
+                                       :key="`sponsor-${sponsor.id}`"
+                                       class="sponsor-card bg-white px-3" :href="sponsor.link"
+                                       target="_blank"
+                                       :title="sponsor.name">
+                                        <img :src="sponsor.logo" class="lazy max-h-[48px] w-auto " alt="">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="relative lg:mt-20 mt-10 lg:px-0 px-6">
+                            <img src="/images/mobile-sponsors-gradient2.png"
+                                 class="lg:hidden block absolute left-0 -top-24 w-full mix-blend-color-dodge" alt="">
+
+                            <div class="relative z-10">
+                                <h3 class="text-xl text-sea-100 font-medium text-center">Platin Sponsorlar</h3>
+                                <div class="lg:mt-6 mt-5 grid lg:grid-cols-4 grid-col-1 gap-x-6 gap-y-4">
+                                    <a v-for="(sponsor, sponsorIndex) in sponsors.filter(s => s.category === 'Platin')"
+                                       :key="`sponsor-${sponsor.id}`"
+                                       class="sponsor-card bg-white px-3"
+                                       :href="sponsor.link"
+                                       target="_blank"
+                                       :title="sponsor.name">
+                                        <img :src="sponsor.logo" class="lazy max-h-[48px] w-auto " alt="">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="relative lg:mt-20 mt-10 lg:px-0 px-6">
+                            <img src="/images/mobile-sponsors-gradient3.png"
+                                 class="lg:hidden block absolute left-0 -top-24 w-full mix-blend-color-dodge" alt="">
+
+                            <div class="relative z-10">
+                                <h3 class="text-xl text-sea-100 font-medium text-center">Gümüş Sponsorlar</h3>
+                                <div class="lg:mt-6 mt-4 grid lg:grid-cols-3 grid-cols-1 gap-x-6 gap-y-4">
+                                    <a v-for="(sponsor, sponsorIndex) in sponsors.filter(s => s.category === 'Gümüş')"
+                                       :key="`sponsor-${sponsor.id}`"
+                                       class="sponsor-card bg-white px-3" :href="sponsor.link"
+                                       target="_blank"
+                                       :title="sponsor.name">
+                                        <img :src="sponsor.logo" class="lazy max-h-[48px] w-auto " alt="">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- F.A.Q. -->
+    <div class="mt-[120px] max-w-[1008px] mx-auto">
+        <div id="sss"></div>
+        <h2 class="text-center">Sıkça Sorulan Sorular</h2>
+        <p
+                class="lg:mt-5 mt-4 lg:text-xl text-base text-main-800 text-center lg:tracking-secondary tracking-primary">
+            SaaStanbul2023 ile ilgili merak ettiğiniz soruların cevaplarına ulaşabilirsiniz.
+        </p>
+
+        <div class="lg:mt-12 mt-10 py-2 rounded-2xl border border-grey-100 divide-y divide-grey-100"
+             style="box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.06);">
+            <div class="faq-item" @click="activeFaqItemIndex = 0" :class="{active: activeFaqItemIndex === 0}">
+                <div class="flex items-center justify-between gap-x-4">
+                    <h3 class="title">Etkinlik tarihi ve yeri nedir?</h3>
+                    <img src="/icons/chevron-down.svg" class="icon lazy" alt="">
+                </div>
+                <p class="desc">
+                    Etkinlik, 13 Temmuz 2023 tarihinde Bahçeşehir Üniversitesi Beşiktaş Güney Kampüsü'nde
+                    düzenlenecektir.
+                </p>
+            </div>
+            <div class="faq-item" @click="activeFaqItemIndex = 1" :class="{active: activeFaqItemIndex === 1}">
+                <div class="flex items-center justify-between gap-x-4">
+                    <h3 class="title">Etkinliğin teması veya odak noktası nedir?</h3>
+                    <img src="/icons/chevron-down.svg" class="icon lazy" alt="">
+                </div>
+                <p class="desc">
+                    Etkinlik, SaaS odağında olmak üzere SEO, büyüme, satış, girişim stüdyoları, şirket kurulumu,
+                    veri analitiği, ürün yönetimi, şirket kurulumu ve ürünleştirme konularını kapsar.
+                </p>
+            </div>
+            <div class="faq-item" @click="activeFaqItemIndex = 2" :class="{active: activeFaqItemIndex === 2}">
+                <div class="flex items-center justify-between gap-x-4">
+                    <h3 class="title">Etkinlik fiziksel mi yoksa sanal mı gerçekleştirilecek?</h3>
+                    <img src="/icons/chevron-down.svg" class="icon lazy" alt="">
+                </div>
+                <p class="desc">
+                    Etkinlik fiziksel olacaktır.
+                </p>
+            </div>
+            <div class="faq-item" @click="activeFaqItemIndex = 3" :class="{active: activeFaqItemIndex === 3}">
+                <div class="flex items-center justify-between gap-x-4">
+                    <h3 class="title">Etkinliğe nasıl kayıt olabilirim?</h3>
+                    <img src="/icons/chevron-down.svg" class="icon lazy" alt="">
+                </div>
+                <p class="desc">
+                    Biletleri ana sayfadaki bağlantıyı takip ederek satın alabilirsiniz. Etkinlik günü girişte yaka
+                    kartınız temin edilecektir. Biletler Kommunity tarafından kesilecek, ve Kommunity ABD merkezli
+                    bir şirket olduğu için e-mail adresinize iletilen faturalara %0 KDV yansıyacaktır. Satın alınan
+                    biletler için yerel bir firmadan fatura kesimi yapılmayacaktır.
+                </p>
+            </div>
+            <div class="faq-item" @click="activeFaqItemIndex = 4" :class="{active: activeFaqItemIndex === 4}">
+                <div class="flex items-center justify-between gap-x-4">
+                    <h3 class="title">Etkinlik mekanında otopark var mı? </h3>
+                    <img src="/icons/chevron-down.svg" class="icon lazy" alt="">
+                </div>
+                <p class="desc">
+                    Evet, aracınızı üniversitenin otoparkına park edebilirsiniz. Otopark için ücret alınabilir.
+                </p>
+            </div>
+            <div class="faq-item" @click="activeFaqItemIndex = 5" :class="{active: activeFaqItemIndex === 5}">
+                <div class="flex items-center justify-between gap-x-4">
+                    <h3 class="title">Etkinlik alanına toplu taşıma ile nasıl ulaşabilirim?</h3>
+                    <img src="/icons/chevron-down.svg" class="icon lazy" alt="">
+                </div>
+                <p class="desc">
+                    <a
+                            href="https://moovitapp.com/index/tr/toplu_ta%C5%9F%C4%B1ma-Bah%C3%A7e%C5%9Fehir_%C3%9Cniversitesi_Otopark-Istanbul-site_35018293-1563">Bu
+                        bağlantıdan</a> bilgi alabilirsiniz.
+                </p>
+            </div>
+            <div class="faq-item" @click="activeFaqItemIndex = 6" :class="{active: activeFaqItemIndex === 6}">
+                <div class="flex items-center justify-between gap-x-4">
+                    <h3 class="title">Etkinlik süresince yiyecek ve içecek sağlanacak mı?</h3>
+                    <img src="/icons/chevron-down.svg" class="icon lazy" alt="">
+                </div>
+                <p class="desc">
+                    Bilet fiyatlarını makul tutma amaçlandığından etkinlik süresince ücretsiz yiyecek ve içecek
+                    sağlanmayacaktır. Etkinlik aralarında çok yakındaki cafe ve mekanlardan yiyecek ve içecek temini
+                    yapılabilir.
+                </p>
+            </div>
+            <div class="faq-item" @click="activeFaqItemIndex = 7" :class="{active: activeFaqItemIndex === 7}">
+                <div class="flex items-center justify-between gap-x-4">
+                    <h3 class="title">Etkinlik düzenleyicilerine nasıl ulaşabilirim?</h3>
+                    <img src="/icons/chevron-down.svg" class="icon lazy" alt="">
+                </div>
+                <p class="desc">
+                    Etkinlik düzenleyicilerine ulaşmak için <a
+                        href="mailto:info@saastanbul.com">info@saastanbul.com</a> adresini kullanabilirsiniz.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- ORGANIZERS -->
+    <div class="relative mt-[120px] section-container" style="display: none;">
+        <div id="organizatörler"></div>
+        <div class="relative z-10 lg:px-10 px-6 lg:pb-10 pb-6 border border-sup-700 rounded-3xl"
+             style="background: linear-gradient(180deg, #121723 42.71%, #18223A 100%);">
+
+            <div class="relative z-10 max-w-[1134px] mx-auto">
+                <img src="/images/organizers-top-gradient.png"
+                     class="lg:block hidden absolute z-10 top-0 left-1/2 transform -translate-x-1/2 lazy mix-blend-color-dodge"
+                     alt="">
+                <img src="/images/mobile-speakers-top-gradient.png"
+                     class="lg:hidden block absolute z-10 top-0 left-1/2 transform -translate-x-1/2 w-full lazy mix-blend-color-dodge"
+                     alt="">
+                <img src="/images/speakers-lines.png"
+                     class="absolute left-1/2 transform -translate-x-1/2 h-full lazy" alt="">
+
+                <div class="bg-mid-900 rounded-b-xl lg:pt-20 pt-10 lg:pb-24 pb-14 lg:px-16">
+                    <div class="relative z-10 max-w-[384px] mx-auto lg:px-0 px-4">
+                        <h2 class="text-main-0 text-center">Organizatörler</h2>
+                        <p class="mt-3 lg:text-xl text-base text-main-700 text-center tracking-secondary">Learn from
+                            the experts on the cutting-edge of deception at the most sinister companies.</p>
+                    </div>
+
+                    <div
+                            class="lg:mt-16 mt-6 flex flex-wrap lg:justify-start justify-center md:gap-x-6 md:gap-y-12 gap-y-4">
+                        <div class="organizer-card">
+                            <div class="relative group rounded-lg overflow-hidden lg:px-0 px-3">
+                                <img src="/images/speakers/speaker-1.png" class="avatar lazy" alt="">
+                                <div
+                                        class="social-box opacity-0 group-hover:opacity-100 invisible group-hover:visible">
+                                    <a href="">
+                                        <img src="/icons/twitter-icon.svg" class="lazy" alt="">
+                                    </a>
+                                    <a href="">
+                                        <img src="/icons/github-icon.svg" class="lazy" alt="">
+                                    </a>
+                                    <a href="">
+                                        <img src="/icons/linkedin-icon.svg" class="lazy" alt="">
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="max-w-[140px] mx-auto">
+                                <h3 class="title">Andrew Greene</h3>
+                                <p class="desc">Frontend Developer at Ultratech</p>
+                            </div>
+                        </div>
+                        <div class="organizer-card">
+                            <div class="relative group rounded-lg overflow-hidden lg:px-0 px-3">
+                                <img src="/images/speakers/speaker-2.png" class="avatar lazy" alt="">
+                                <div
+                                        class="social-box opacity-0 group-hover:opacity-100 invisible group-hover:visible">
+                                    <a href="">
+                                        <img src="/icons/twitter-icon.svg" class="lazy" alt="">
+                                    </a>
+                                    <a href="">
+                                        <img src="/icons/github-icon.svg" class="lazy" alt="">
+                                    </a>
+                                    <a href="">
+                                        <img src="/icons/linkedin-icon.svg" class="lazy" alt="">
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="max-w-[140px] mx-auto">
+                                <h3 class="title">Andrew Greene</h3>
+                                <p class="desc">Frontend Developer at Ultratech</p>
+                            </div>
+                        </div>
+                        <div class="organizer-card">
+                            <div class="relative group rounded-lg overflow-hidden lg:px-0 px-3">
+                                <img src="/images/speakers/speaker-3.png" class="avatar lazy" alt="">
+                                <div
+                                        class="social-box opacity-0 group-hover:opacity-100 invisible group-hover:visible">
+                                    <a href="">
+                                        <img src="/icons/twitter-icon.svg" class="lazy" alt="">
+                                    </a>
+                                    <a href="">
+                                        <img src="/icons/github-icon.svg" class="lazy" alt="">
+                                    </a>
+                                    <a href="">
+                                        <img src="/icons/linkedin-icon.svg" class="lazy" alt="">
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="max-w-[140px] mx-auto">
+                                <h3 class="title">Andrew Greene</h3>
+                                <p class="desc">Frontend Developer at Ultratech</p>
+                            </div>
+                        </div>
+                        <div class="organizer-card">
+                            <div class="relative group rounded-lg overflow-hidden lg:px-0 px-3">
+                                <img src="/images/speakers/speaker-4.png" class="avatar lazy" alt="">
+                                <div
+                                        class="social-box opacity-0 group-hover:opacity-100 invisible group-hover:visible">
+                                    <a href="">
+                                        <img src="/icons/twitter-icon.svg" class="lazy" alt="">
+                                    </a>
+                                    <a href="">
+                                        <img src="/icons/github-icon.svg" class="lazy" alt="">
+                                    </a>
+                                    <a href="">
+                                        <img src="/icons/linkedin-icon.svg" class="lazy" alt="">
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="max-w-[140px] mx-auto">
+                                <h3 class="title">Andrew Greene</h3>
+                                <p class="desc">Frontend Developer at Ultratech</p>
+                            </div>
+                        </div>
+                        <div class="organizer-card">
+                            <div class="relative group rounded-lg overflow-hidden lg:px-0 px-3">
+                                <img src="/images/speakers/speaker-5.png" class="avatar lazy" alt="">
+                                <div
+                                        class="social-box opacity-0 group-hover:opacity-100 invisible group-hover:visible">
+                                    <a href="">
+                                        <img src="/icons/twitter-icon.svg" class="lazy" alt="">
+                                    </a>
+                                    <a href="">
+                                        <img src="/icons/github-icon.svg" class="lazy" alt="">
+                                    </a>
+                                    <a href="">
+                                        <img src="/icons/linkedin-icon.svg" class="lazy" alt="">
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="max-w-[140px] mx-auto">
+                                <h3 class="title">Andrew Greene</h3>
+                                <p class="desc">Frontend Developer at Ultratech</p>
+                            </div>
+                        </div>
+                        <div class="organizer-card">
+                            <div class="relative group rounded-lg overflow-hidden lg:px-0 px-3">
+                                <img src="/images/speakers/speaker-1.png" class="avatar lazy" alt="">
+                                <div
+                                        class="social-box opacity-0 group-hover:opacity-100 invisible group-hover:visible">
+                                    <a href="">
+                                        <img src="/icons/twitter-icon.svg" class="lazy" alt="">
+                                    </a>
+                                    <a href="">
+                                        <img src="/icons/github-icon.svg" class="lazy" alt="">
+                                    </a>
+                                    <a href="">
+                                        <img src="/icons/linkedin-icon.svg" class="lazy" alt="">
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="max-w-[140px] mx-auto">
+                                <h3 class="title">Andrew Greene</h3>
+                                <p class="desc">Frontend Developer at Ultratech</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <img src="/images/organizers-bottom-gradient.png"
+                 class="lg:block hidden absolute z-0 bottom-0 left-1/2 transform -translate-x-1/2 lazy mix-blend-color-dodge"
+                 alt="">
+        </div>
+    </div>
+
+    <footer class="relative lg:mt-24 mt-20 lg:mx-0 -mx-4 lg:pb-6 pb-7"
+            style="background: linear-gradient(0deg, #080E1D, #080E1D);background-blend-mode: hard-light, normal;">
+        <img src="/images/footer-gradient.png"
+             class="lg:block hidden absolute z-10 bottom-0 left-0 lazy mix-blend-color-dodge" alt="">
+        <img src="/images/mobile-footer-gradient.png"
+             class="lg:hidden block absolute z-10 bottom-0 left-0 w-full lazy mix-blend-color-dodge" alt="">
+
+        <img src="/images/footer-bg.png"
+             class="lg:block hidden absolute w-full h-[-webkit-fill-available] lazy" alt="">
+        <img src="/images/mobile-footer-bg.png" class="lg:hidden block absolute right-0 w-full lazy" alt="">
+
+        <div class="relative z-10 section-container lg:pt-6 pt-5 lg:px-0 px-4">
+            <div
+                    class="flex lg:flex-row flex-col items-center justify-between border-b-2 border-[#101E50] lg:pb-6 pb-5">
+                <div class="lg:w-auto w-full lg:border-b-0 border-b-2 border-[#101E50] lg:pb-0 pb-5">
+                    <a href="index.html">
+                        <img src="/logo-light.svg" class="lazy lg:mx-0 mx-auto" alt="">
+                    </a>
+                    <div class="mt-1 text-xs text-grey-200 lg:text-left text-center tracking-secondary opacity-60">
+                        İstanbul SaaS girişimcileri ile buluşuyor
+                    </div>
+                </div>
+                <div
+                        class="flex flex-wrap items-center lg:justify-start justify-center lg:gap-x-8 gap-x-6 gap-y-2 lg:pt-0 pt-5 lg:px-0 px-8">
+                    <a href="#konuşmacılar" class="nav-item text-main-0">Konuşmacılar</a>
+                    <a href="#program" class="nav-item text-main-0">Program</a>
+                    <a href="#sponsorlar" class="nav-item text-main-0">Sponsorlar</a>
+                    <a href="#biletler" class="nav-item text-main-0">Biletler</a>
+                    <a href="#sss" class="nav-item text-main-0">S.S.S</a>
+                    <a style="display: none;" href="#organizatörler" class="nav-item text-main-0">Organizatörler</a>
+                </div>
+            </div>
+            <div class="flex items-center justify-between lg:pt-4 pt-6">
+                <a href="https://tr.communitycodeofconduct.com/" target="_blank"
+                   class="lg:block hidden nav-item text-main-0">Code of Conduct</a>
+
+                <div class="lg:w-auto w-full flex items-center lg:justify-start justify-center lg:gap-x-6 gap-x-4">
+                    <a href="" style="display: none;">
+                        <img src="/icons/youtube-white-icon.svg" class="lazy" alt="">
+                    </a>
+                    <a href="https://twitter.com/SaaStanbul" target="_blank">
+                        <img src="/icons/twitter-white-icon.svg" class="lazy" alt="">
+                    </a>
+                    <a href="https://kommunity.com/saastanbul" target="_blank">
+                        <img src="/icons/k-white-icon.svg" class="lazy" alt="">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vue@2.7.14/dist/vue.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.5/lodash.min.js"></script>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-DWNT3XM595"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+
+  function gtag() {
+    dataLayer.push(arguments);
+  }
+
+  gtag('js', new Date());
+
+  gtag('config', 'G-DWNT3XM595');
+</script>
+
+<script>
+  var lazyLoadInstance = new LazyLoad({
+    // Your custom settings go here
+  });
+
+  lazyLoadInstance.update();
+
+
+  var App = new Vue({
+    el: '#app',
+    data: {
+      speakers: [],
+      sessions: [],
+      tracks: [],
+      sponsors: [],
+      activeFaqItemIndex: 1,
+      tweets: [
+        [
+          {
+            name: "Rob Allen 1",
+            username: "roballen",
+            content: "Lorem ipsum dolor sit amet consectetur. Ultrices aliquam sit est massa. Sed amet tristique elementum faucibus aliquet in vulputate sapien aenean. Id volutpat pellentesque.",
+            avatar: "http://127.0.0.1:8080/images/rob-allen.png",
+            time: "ÖS 6:16 · 20 Temmuz 2023"
+          },
+          {
+            name: "Rob Allen 2",
+            username: "roballen",
+            content: "Lorem ipsum dolor sit amet consectetur. Ultrices aliquam sit est massa. Sed amet tristique elementum faucibus aliquet in vulputate sapien aenean. Id volutpat pellentesque.",
+            avatar: "http://127.0.0.1:8080/images/rob-allen.png",
+            time: "ÖS 6:16 · 20 Temmuz 2023"
+          },
+          {
+            name: "Rob Allen 3",
+            username: "roballen",
+            content: "Lorem ipsum dolor sit amet consectetur. Ultrices aliquam sit est massa. Sed amet tristique elementum faucibus aliquet in vulputate sapien aenean. Id volutpat pellentesque.",
+            avatar: "http://127.0.0.1:8080/images/rob-allen.png",
+            time: "ÖS 6:16 · 20 Temmuz 2023"
+          }
+        ],
+        [
+          {
+            name: "Rob Allen 4",
+            username: "roballen",
+            content: "Lorem ipsum dolor sit amet consectetur. Ultrices aliquam sit est massa. Sed amet tristique elementum faucibus aliquet in vulputate sapien aenean. Id volutpat pellentesque.",
+            avatar: "http://127.0.0.1:8080/images/rob-allen.png",
+            time: "ÖS 6:16 · 20 Temmuz 2023"
+          },
+          {
+            name: "Rob Allen 5",
+            username: "roballen",
+            content: "Lorem ipsum dolor sit amet consectetur. Ultrices aliquam sit est massa. Sed amet tristique elementum faucibus aliquet in vulputate sapien aenean. Id volutpat pellentesque.",
+            avatar: "http://127.0.0.1:8080/images/rob-allen.png",
+            time: "ÖS 6:16 · 20 Temmuz 2023"
+          },
+          {
+            name: "Rob Allen 6",
+            username: "roballen",
+            content: "Lorem ipsum dolor sit amet consectetur. Ultrices aliquam sit est massa. Sed amet tristique elementum faucibus aliquet in vulputate sapien aenean. Id volutpat pellentesque.",
+            avatar: "http://127.0.0.1:8080/images/rob-allen.png",
+            time: "ÖS 6:16 · 20 Temmuz 2023"
+          }
+        ],
+      ],
+      isMenuOpen: false
+    },
+    mounted() {
+      this.fetch()
+    },
+    methods: {
+      fetch: function () {
+        axios.get("https://api.kommunity.com/api/v3/saastanbul/events/saastanbul-2023-101374c0").then(response => {
+          this.speakers = response.data.data.speakers;
+
+          const groupedSessions = [];
+
+          response.data.data.schedule[0].tracks.forEach((salon) => {
+            salon.sessions.forEach((session) => {
+              session.talks.forEach((talk) => {
+                const existingGroup = groupedSessions.find((group) => group.start === session.start && group.end === session.end);
+                if (existingGroup) {
+                  existingGroup.talks.push(talk);
+                } else {
+                  groupedSessions.push({
+                    start: session.start,
+                    end: session.end,
+                    talks: [talk]
+                  });
+                }
+              });
+            });
+          });
+
+          this.sessions = groupedSessions
+          this.tracks = response.data.data.schedule[0].tracks
+          this.sponsors = response.data.data.sponsors
+
+        });
+      },
+      findSpeakers: function () {
+        return this.speakers;
+      },
+      getSpeaker(slug) {
+        return this.speakers.find(speaker => speaker.slug === slug)
+      },
+      showMobileMenu() {
+        this.isMenuOpen = true
+      },
+      hideMobileMenu() {
+        this.isMenuOpen = false
+      }
+    }
+  });
+</script>
+</body>
+
+</html>

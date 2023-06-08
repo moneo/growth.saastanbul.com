@@ -1,0 +1,481 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-touch-fullscreen" content="yes">
+    <meta name="HandheldFriendly" content="True">
+
+    <meta name="description"
+          content="SaaS alanındaki son gelişmeleri yakından takip etmek, zorlukları ve fırsatları keşfetmek, ilham verici konuşmacılarla tanışmak ve sektör profesyonelleriyle bağlantı kurmak için bu heyecan verici etkinliği kaçırmayın."/>
+
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="theme-color" content="#ffffff">
+
+    <meta property="og:locale" content="tr_TR"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:title" content="SaaStanbul 2023"/>
+    <meta property="og:description" content="SaaStanbul 2023 - 12 Temmuz 2023 Bahçeşehir Üniversitesi"/>
+    <meta property="og:url" content="https://saastanbul.com/"/>
+    <meta property="og:site_name" content="SaaStanbul 2023"/>
+    <meta property="og:image" content="/images/og-image.png"/>
+
+    <meta name="twitter:card" content="summary_large_image"/>
+    <meta name="twitter:image" content="/images/og-image.png"/>
+    <meta name="twitter:description" content="SaaStanbul 2023 - 12 Temmuz 2023 Bahçeşehir Üniversitesi"/>
+    <meta name="twitter:title" content="SaaStanbul 2023"/>
+
+    <title>Etkinlik Programı - SaaStanbul 2023</title>
+
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@17.8.3/dist/lazyload.min.js"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              main: {
+                0: '#FEFEFF',
+                700: '#9CA1AB',
+                800: '#4C4F57',
+                900: '#121723',
+              },
+              sea: {
+                50: '#F1FDFF',
+                100: '#D7EBF4',
+                200: '#C5EFF6',
+                300: '#7DC7FF',
+                400: '#55ACEE',
+              },
+              mid: {
+                600: '#18223A',
+                700: '#232835',
+                800: '#101420',
+                900: '#080E1D',
+              },
+              sup: {
+                700: '#006B7D',
+                800: '#0058AC',
+                900: '#104C85',
+              },
+              grey: {
+                100: '#EEEEEE',
+                200: '#D8D8D8',
+                300: '#B1B1B1',
+                400: '#8A8A8A',
+                500: '#646464',
+                600: '#474747',
+                700: '#353535',
+                800: '#242424',
+                900: '#121212',
+              },
+              azul: {
+                100: '#E9EFFD',
+                200: '#CFDCFB',
+                300: '#9EBAF6',
+                400: '#6E97F2',
+                500: '#3D74ED',
+                600: '#2158D1',
+                700: '#19429D',
+                800: '#102C68',
+                900: '#081634',
+              }
+            },
+            fontFamily: {
+              'sans': ['Maven Pro', 'sans-serif'],
+            },
+            borderRadius: {},
+            letterSpacing: {
+              primary: '-0.6px',
+              secondary: '-0.03em',
+            }
+          }
+        }
+      }
+    </script>
+
+    <style type="text/tailwindcss">
+        @layer components {
+            html {
+                scroll-behavior: smooth;
+            }
+
+            .section-container {
+                @apply max-w-[1216px] mx-auto;
+            }
+
+            .nav-item {
+                @apply text-base text-main-900 font-medium tracking-primary;
+            }
+
+            .page-title {
+                @apply lg:text-[76px] text-[38px] lg:leading-[120%] leading-[46px] text-center tracking-secondary;
+
+                background: linear-gradient(180deg, #184C57 0%, #121723 100%);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                background-clip: text;
+                text-fill-color: transparent;
+            }
+
+            h2 {
+                @apply lg:text-[32px] lg:leading-9 text-2xl text-main-900 font-medium tracking-secondary;
+            }
+
+            .schedule-title {
+                @apply text-xl text-azul-500 font-semibold text-center max-w-[550px] w-full whitespace-nowrap;
+            }
+
+            .schedule-list {
+                @apply pt-4 max-w-[154px] w-full;
+            }
+
+            .schedule-card {
+                @apply flex flex-col items-center justify-center bg-white rounded-xl text-lg text-main-900 font-medium tracking-secondary text-center lg:mt-0 mt-4;
+
+                box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.06);
+            }
+
+            .schedule-card.empty {
+                @apply min-h-[108px]
+            }
+
+            .schedule-card .title {
+                @apply p-4 border-b border-[#F6F6F7] min-h-[88px] flex items-center justify-center;
+            }
+
+            .schedule-card .speaker-box {
+                @apply text-base py-4 flex items-center justify-center gap-x-2;
+            }
+
+            .schedule-card .speaker-box .avatar {
+                @apply rounded-full h-6 w-6;
+            }
+
+            .schedule-time {
+                @apply flex items-center lg:text-lg text-base lg:text-main-900 text-azul-500 font-medium tracking-secondary even:text-main-700;
+            }
+
+            .schedule-time.sm {
+                @apply h-[92px];
+            }
+
+            .schedule-time.md {
+                @apply h-[108px];
+            }
+
+            .schedule-time.lg {
+                @apply h-[145px];
+            }
+        }
+    </style>
+</head>
+<body class="lg:px-0 px-4">
+<div id="app">
+    <!-- NAVIGATION -->
+    <div class="lg:mx-0 -mx-4 border-b border-sea-50" style="box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.06)">
+        <nav class="section-container flex items-center justify-between lg:py-6 lg:px-0 p-4">
+            <a href="index.html">
+                <img src="/logo.svg" class="lg:max-w-full max-w-[128px]" alt="">
+            </a>
+            <div class="lg:flex hidden items-center gap-x-10">
+                <a href="index.html#konuşmacılar" class="nav-item">
+                    Konuşmacılar
+                </a>
+                <a href="schedule.html" class="nav-item">
+                    Program
+                </a>
+                <a href="index.html#sponsorlar" class="nav-item">
+                    Sponsorlar
+                </a>
+                <a href="index.html#biletler" class="nav-item">
+                    Biletler
+                </a>
+                <a href="index.html#sss" class="nav-item">
+                    S.S.S
+                </a>
+                <a href="index.html#organizatörler" class="nav-item">
+                    Organizatörler
+                </a>
+            </div>
+            <a href="https://kommunity.com/saastanbul/events/saastanbul-2023-101374c0/tickets" target="_blank"
+               class="lg:inline-block hidden rounded-lg py-2 px-6 text-base text-main-900 border border-sea-200 font-medium"
+               style="background: linear-gradient(90deg, #F1FCFF 0%, #EFFFFD 100%); box-shadow: 0px 1px 3px rgba(238, 255, 254, 0.25), 0px 0.5px 0.5px rgba(238, 255, 254, 0.25)">
+                Bilet satın al
+            </a>
+            <button class="lg:hidden block" @click="showMobileMenu">
+                <img src="/icons/menu-icon.svg" alt="">
+            </button>
+        </nav>
+    </div>
+
+    <div id="mobile-menu" class="fixed inset-0 z-[999] bg-white" style="display: none" v-show="isMenuOpen">
+        <div class="flex justify-between items-center p-4 border-b border-sea-50">
+            <img src="/logo.svg" class="lg:w-auto max-w-[128px] lazy" alt="">
+
+            <button class="relative" @click="hideMobileMenu">
+                <img src="/icons/x-icon.svg" class="lazy" alt="">
+            </button>
+        </div>
+        <div class="p-6">
+            <div class="space-y-6">
+                <a href="index.html#konuşmacılar" class="block text-2xl text-grey-800 font-medium tracking-secondary" @click="hideMobileMenu">
+                    Konuşmacılar
+                </a>
+                <a href="schedule.html" class="block text-2xl text-grey-800 font-medium tracking-secondary" @click="hideMobileMenu">
+                    Program
+                </a>
+                <a href="index.html#sponsorlar" class="block text-2xl text-grey-800 font-medium tracking-secondary" @click="hideMobileMenu">
+                    Sponsorlar
+                </a>
+                <a href="index.html#bilerler" class="block text-2xl text-grey-800 font-medium tracking-secondary" @click="hideMobileMenu">
+                    Biletler
+                </a>
+                <a href="index.html#sss" class="block text-2xl text-grey-800 font-medium tracking-secondary" @click="hideMobileMenu">
+                    S.S.S
+                </a>
+                <a href="index.html#organizatörler" class="block text-2xl text-grey-800 font-medium tracking-secondary" @click="hideMobileMenu">
+                    Organizatörler
+                </a>
+            </div>
+            <a href=""
+               class="mt-10 block rounded-lg py-3 text-xl text-main-900 text-center tracking-secondary border border-sea-200 font-medium"
+               style="background: linear-gradient(90deg, #F1FCFF 0%, #EFFFFD 100%); box-shadow: 0px 1px 3px rgba(238, 255, 254, 0.25), 0px 0.5px 0.5px rgba(238, 255, 254, 0.25)">
+                Bilet satın al
+            </a>
+        </div>
+    </div>
+
+    <!-- HERO -->
+    <div class="relative lg:pt-20 pt-16 lg:mx-0 -mx-4 lg:px-0 px-4">
+        <img src="/images/hero-bg.png" class="lg:block hidden absolute top-0 left-1/2 transform -translate-x-1/2"
+             alt="">
+        <img src="/images/mobile-hero-bg.png"
+             class="lg:hidden block absolute top-0 left-1/2 transform -translate-x-1/2 w-full" alt="">
+
+        <div class="relative z-10">
+            <div class="max-w-[800px] mx-auto">
+                <h1 class="page-title font-semibold">Etkinlik Programı</h1>
+                <p class="lg:mt-6 mt-4 lg:text-2xl text-lg text-main-800 text-center tracking-primary">
+                    Gün boyunca iki ayrı salonda(MRR ve ACV) paralel oturumlarla sürecek etkinliğin saatlerine göz atabilirsin.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- SCHEDULE -->
+    <div class="section-container lg:mt-[120px] mt-20 lg:mx-auto -mx-4">
+        <div id="program"></div>
+        <h2 class="lg:text-left text-center">Etkinlik Programı</h2>
+        <div class="lg:mt-10 mt-8">
+            <div class="flex items-center gap-x-8 lg:justify-end w-full overflow-x-auto lg:px-0 px-4">
+                <div class="schedule-title">MRR salonu</div>
+                <div class="schedule-title">ACV salonu</div>
+            </div>
+            <div class="lg:hidden block mt-6">
+                <div class="flex overflow-x-auto px-4">
+                    <div class="flex gap-x-6 bg-sea-50 rounded-2xl p-4 flex-shrink-0">
+                        <div v-for="(track, trackIndex) in tracks" :key="`track-${trackIndex}`"
+                             class="space-y-4 max-w-[310px]">
+                            <div v-for="(session, sessionIndex) in track.sessions"
+                                 :key="`track-${trackIndex}-${sessionIndex}`">
+                                <div class="schedule-time">{{session.start}} - {{session.end}}</div>
+                                <div v-for="(talk, talkIndex) in session.talks"
+                                     :key="`track-${trackIndex}-${sessionIndex}-${talkIndex}`" class="schedule-card">
+                                    <div class="title">
+                                        {{talk.title}}
+                                    </div>
+                                    <div v-if="talk.speakers.length > 0" class="speaker-box px-8">
+                                        <img :src="getSpeaker(talk.speakers[0]).avatar" class="avatar lazy" alt="">
+                                        <div>
+                                            <span class="font-medium">{{getSpeaker(talk.speakers[0]).name}}</span>
+                                            ({{getSpeaker(talk.speakers[0]).title}})
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="mt-6 lg:flex hidden">
+
+                <div class="flex-1">
+                    <div class="relative bg-sea-50 rounded-2xl p-4 ">
+                        <img src="/images/schedule-gradient.png"
+                             class="absolute top-0 right-0 lazy mix-blend-color-dodge" alt="">
+                        <div class="relative z-10 grid grid-cols-12 gap-4">
+
+                            <div v-for="(session, sessionIndex) in sessions" :key="`talk-${sessionIndex}`"
+                                 class="relative col-span-12 grid grid-cols-12 gap-4">
+                                <div class="h-full flex items-center absolute left-[-150px] top-0 z-10">
+                                    <div class="schedule-time">
+                                        {{session.start}} - {{session.end}}
+                                    </div>
+                                </div>
+                                <div v-for="(talk, talkIndex) in session.talks"
+                                     :key="`talk-${sessionIndex}-${talkIndex}`" class="schedule-card row-span-1"
+                                     :class="{'col-span-6': session.talks.length === 2, 'col-span-12': session.talks.length === 1}">
+                                    <div class="title">
+                                        {{talk.title}}
+                                    </div>
+                                    <div v-if="talk.speakers.length > 0" class="speaker-box">
+                                        <img :src="getSpeaker(talk.speakers[0]).avatar" class="avatar lazy" alt="">
+                                        <div>
+                                            <span class="font-medium">{{getSpeaker(talk.speakers[0]).name}}</span>
+                                            ({{getSpeaker(talk.speakers[0]).title}})
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="relative lg:mt-24 mt-20 lg:mx-0 -mx-4 lg:pb-6 pb-7"
+            style="background: linear-gradient(0deg, #080E1D, #080E1D);background-blend-mode: hard-light, normal;">
+        <img src="/images/footer-gradient.png"
+             class="lg:block hidden absolute z-10 bottom-0 left-0 lazy mix-blend-color-dodge" alt="">
+        <img src="/images/mobile-footer-gradient.png"
+             class="lg:hidden block absolute z-10 bottom-0 left-0 w-full lazy mix-blend-color-dodge" alt="">
+
+        <img src="/images/footer-bg.png" class="lg:block hidden absolute w-full h-[-webkit-fill-available] lazy" alt="">
+        <img src="/images/mobile-footer-bg.png" class="lg:hidden block absolute right-0 w-full lazy" alt="">
+
+        <div class="relative z-10 section-container lg:pt-6 pt-5 lg:px-0 px-4">
+            <div class="flex lg:flex-row flex-col items-center justify-between border-b-2 border-[#101E50] lg:pb-6 pb-5">
+                <div class="lg:w-auto w-full lg:border-b-0 border-b-2 border-[#101E50] lg:pb-0 pb-5">
+                    <a href="index.html">
+                        <img src="/logo-light.svg" class="lazy lg:mx-0 mx-auto" alt="">
+                    </a>
+                    <div class="mt-1 text-xs text-grey-200 lg:text-left text-center tracking-secondary opacity-60">
+                        İstanbul SaaS geliştiricileri ile buluşuyor
+                    </div>
+                </div>
+                <div class="flex flex-wrap items-center lg:justify-start justify-center lg:gap-x-8 gap-x-6 gap-y-2 lg:pt-0 pt-5 lg:px-0 px-8">
+                    <a href="index.html#konuşmacılar" class="nav-item text-main-0">Konuşmacılar</a>
+                    <a href="schedule.html" class="nav-item text-main-0">Program</a>
+                    <a href="index.html#sponsorlar" class="nav-item text-main-0">Sponsorlar</a>
+                    <a href="index.html#biletler" class="nav-item text-main-0">Biletler</a>
+                    <a href="index.html#sss" class="nav-item text-main-0">S.S.S</a>
+                    <a href="index.html#organizatörler" class="nav-item text-main-0">Organizatörler</a>
+                </div>
+            </div>
+            <div class="flex items-center justify-between lg:pt-4 pt-6">
+                <a href="https://tr.communitycodeofconduct.com/" target="_blank" class="lg:block hidden nav-item text-main-0">Code of Conduct</a>
+
+                <div class="lg:w-auto w-full flex items-center lg:justify-start justify-center lg:gap-x-6 gap-x-4">
+                    <a href="" style="display: none;">
+                        <img src="/icons/youtube-white-icon.svg" class="lazy" alt="">
+                    </a>
+                    <a href="https://twitter.com/SaaStanbul" target="_blank">
+                        <img src="/icons/twitter-white-icon.svg" class="lazy" alt="">
+                    </a>
+                    <a href="https://kommunity.com/saastanbul" target="_blank">
+                        <img src="/icons/k-white-icon.svg" class="lazy" alt="">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vue@2.7.14/dist/vue.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.5/lodash.min.js"></script>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-DWNT3XM595"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-DWNT3XM595');
+</script>
+
+<script>
+  var lazyLoadInstance = new LazyLoad({
+    // Your custom settings go here
+  });
+
+  lazyLoadInstance.update();
+
+
+  var App = new Vue({
+    el: '#app',
+    data: {
+      speakers: [],
+      sessions: [],
+      tracks: [],
+      sponsors: [],
+      isMenuOpen: false
+    },
+    mounted() {
+      this.fetch()
+    },
+    methods: {
+      fetch: function () {
+        axios.get("https://api.kommunity.com/api/v3/saastanbul/events/saastanbul-2023-101374c0").then(response => {
+          this.speakers = response.data.data.speakers;
+
+          const groupedSessions = [];
+
+          response.data.data.schedule[0].tracks.forEach((salon) => {
+            salon.sessions.forEach((session) => {
+              session.talks.forEach((talk) => {
+                const existingGroup = groupedSessions.find((group) => group.start === session.start && group.end === session.end);
+                if (existingGroup) {
+                  existingGroup.talks.push(talk);
+                } else {
+                  groupedSessions.push({
+                    start: session.start,
+                    end: session.end,
+                    talks: [talk]
+                  });
+                }
+              });
+            });
+          });
+
+          this.sessions = groupedSessions
+          this.tracks = response.data.data.schedule[0].tracks
+          this.sponsors = response.data.data.sponsors
+
+        });
+      },
+      findSpeakers: function () {
+        return this.speakers;
+      },
+      getSpeaker(slug) {
+        return this.speakers.find(speaker => speaker.slug === slug)
+      },
+      showMobileMenu(){
+        this.isMenuOpen = true
+      },
+      hideMobileMenu(){
+        this.isMenuOpen = false
+      }
+    }
+  });
+</script>
+</body>
+</html>
