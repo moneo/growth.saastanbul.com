@@ -229,22 +229,28 @@
         </div>
         <div class="p-6">
             <div class="space-y-6">
-                <a href="index.html#konuşmacılar" class="block text-2xl text-grey-800 font-medium tracking-secondary" @click="hideMobileMenu">
+                <a href="index.html#konuşmacılar" class="block text-2xl text-grey-800 font-medium tracking-secondary"
+                   @click="hideMobileMenu">
                     Konuşmacılar
                 </a>
-                <a href="schedule.html" class="block text-2xl text-grey-800 font-medium tracking-secondary" @click="hideMobileMenu">
+                <a href="schedule.html" class="block text-2xl text-grey-800 font-medium tracking-secondary"
+                   @click="hideMobileMenu">
                     Program
                 </a>
-                <a href="index.html#sponsorlar" class="block text-2xl text-grey-800 font-medium tracking-secondary" @click="hideMobileMenu">
+                <a href="index.html#sponsorlar" class="block text-2xl text-grey-800 font-medium tracking-secondary"
+                   @click="hideMobileMenu">
                     Sponsorlar
                 </a>
-                <a href="index.html#bilerler" class="block text-2xl text-grey-800 font-medium tracking-secondary" @click="hideMobileMenu">
+                <a href="index.html#bilerler" class="block text-2xl text-grey-800 font-medium tracking-secondary"
+                   @click="hideMobileMenu">
                     Biletler
                 </a>
-                <a href="index.html#sss" class="block text-2xl text-grey-800 font-medium tracking-secondary" @click="hideMobileMenu">
+                <a href="index.html#sss" class="block text-2xl text-grey-800 font-medium tracking-secondary"
+                   @click="hideMobileMenu">
                     S.S.S
                 </a>
-                <a href="index.html#organizatörler" class="block text-2xl text-grey-800 font-medium tracking-secondary" @click="hideMobileMenu">
+                <a href="index.html#organizatörler" class="block text-2xl text-grey-800 font-medium tracking-secondary"
+                   @click="hideMobileMenu">
                     Organizatörler
                 </a>
             </div>
@@ -267,7 +273,8 @@
             <div class="max-w-[800px] mx-auto">
                 <h1 class="page-title font-semibold">Etkinlik Programı</h1>
                 <p class="lg:mt-6 mt-4 lg:text-2xl text-lg text-main-800 text-center tracking-primary">
-                    Gün boyunca iki ayrı salonda (Fazıl Say ve B salonları) paralel oturumlarla sürecek etkinliğin saatlerine göz atabilirsin.
+                    Gün boyunca iki ayrı salonda (Fazıl Say ve B salonları) paralel oturumlarla sürecek etkinliğin
+                    saatlerine göz atabilirsin.
                 </p>
             </div>
         </div>
@@ -301,6 +308,11 @@
                                             <span class="font-medium">{{getSpeaker(talk.speakers[0]).name}}</span>
                                             ({{getSpeaker(talk.speakers[0]).title}})
                                         </div>
+                                    </div>
+                                    <div v-if="talk.key === 1306 || talk.key === 1314" class="speaker-box px-8 text-blue-500 text-sm font-normal">
+                                        <a href="https://app.retable.io/form/eiLcsKKs3j9xNrNR" target="_blank">SaaStanbul 2023
+                                            etkinliğinde seçilecek 12 firmaya 5'er dk sunum hakkı tanınacaktır. Sunum
+                                            hakkı elde etmek için lütfen bu form üzerinden başvuru yapınız.</a>
                                     </div>
                                 </div>
                             </div>
@@ -338,6 +350,11 @@
                                             <span class="font-medium">{{getSpeaker(talk.speakers[0]).name}}</span>
                                             ({{getSpeaker(talk.speakers[0]).title}})
                                         </div>
+                                    </div>
+                                    <div v-if="talk.key === 1306 || talk.key === 1314" class="speaker-box px-8 text-blue-500 text-sm font-normal">
+                                        <a href="https://app.retable.io/form/eiLcsKKs3j9xNrNR" target="_blank">SaaStanbul 2023
+                                            etkinliğinde seçilecek 12 firmaya 5'er dk sunum hakkı tanınacaktır. Sunum
+                                            hakkı elde etmek için lütfen bu form üzerinden başvuru yapınız.</a>
                                     </div>
                                 </div>
                             </div>
@@ -381,7 +398,8 @@
                 </div>
             </div>
             <div class="flex items-center justify-between lg:pt-4 pt-6">
-                <a href="https://tr.communitycodeofconduct.com/" target="_blank" class="lg:block hidden nav-item text-main-0">Code of Conduct</a>
+                <a href="https://tr.communitycodeofconduct.com/" target="_blank"
+                   class="lg:block hidden nav-item text-main-0">Code of Conduct</a>
 
                 <div class="lg:w-auto w-full flex items-center lg:justify-start justify-center lg:gap-x-6 gap-x-4">
                     <a href="" style="display: none;">
@@ -406,7 +424,11 @@
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-DWNT3XM595"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
+
+  function gtag() {
+    dataLayer.push(arguments);
+  }
+
   gtag('js', new Date());
 
   gtag('config', 'G-DWNT3XM595');
@@ -468,10 +490,10 @@
       getSpeaker(slug) {
         return this.speakers.find(speaker => speaker.slug === slug)
       },
-      showMobileMenu(){
+      showMobileMenu() {
         this.isMenuOpen = true
       },
-      hideMobileMenu(){
+      hideMobileMenu() {
         this.isMenuOpen = false
       }
     }

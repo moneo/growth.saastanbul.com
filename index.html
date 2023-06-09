@@ -734,6 +734,23 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="relative lg:mt-20 mt-14 lg:px-0 px-5">
+                            <img src="/images/mobile-sponsors-gradient1.png"
+                                 class="lg:hidden block absolute left-0 -top-24 w-full mix-blend-color-dodge" alt="">
+
+                            <div class="relative z-10">
+                                <h3 class="text-xl text-sea-100 font-medium text-center">Altın Sponsorlar</h3>
+                                <div class="lg:mt-6 mt-4 grid lg:grid-cols-3 grid-cols-1 gap-x-6 gap-y-4">
+                                    <a v-for="(sponsor, sponsorIndex) in sponsors.filter(s => s.category === 'Altın')"
+                                       :key="`sponsor-${sponsor.id}`"
+                                       class="sponsor-card bg-white px-3" :href="sponsor.link"
+                                       target="_blank"
+                                       :title="sponsor.name">
+                                        <img :src="sponsor.logo" class="lazy max-h-[48px] w-auto " alt="">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
                         <div class="relative lg:mt-20 mt-10 lg:px-0 px-6">
                             <img src="/images/mobile-sponsors-gradient2.png"
                                  class="lg:hidden block absolute left-0 -top-24 w-full mix-blend-color-dodge" alt="">
@@ -760,6 +777,40 @@
                                 <h3 class="text-xl text-sea-100 font-medium text-center">Gümüş Sponsorlar</h3>
                                 <div class="lg:mt-6 mt-4 grid lg:grid-cols-3 grid-cols-1 gap-x-6 gap-y-4">
                                     <a v-for="(sponsor, sponsorIndex) in sponsors.filter(s => s.category === 'Gümüş')"
+                                       :key="`sponsor-${sponsor.id}`"
+                                       class="sponsor-card bg-white px-3" :href="sponsor.link"
+                                       target="_blank"
+                                       :title="sponsor.name">
+                                        <img :src="sponsor.logo" class="lazy max-h-[48px] w-auto " alt="">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="relative lg:mt-20 mt-10 lg:px-0 px-6">
+                            <img src="/images/mobile-sponsors-gradient3.png"
+                                 class="lg:hidden block absolute left-0 -top-24 w-full mix-blend-color-dodge" alt="">
+
+                            <div class="relative z-10">
+                                <h3 class="text-xl text-sea-100 font-medium text-center">Tanıtım Sponsorları</h3>
+                                <div class="lg:mt-6 mt-4 grid lg:grid-cols-3 grid-cols-1 gap-x-6 gap-y-4">
+                                    <a v-for="(sponsor, sponsorIndex) in sponsors.filter(s => s.category === 'Tanıtım')"
+                                       :key="`sponsor-${sponsor.id}`"
+                                       class="sponsor-card bg-white px-3" :href="sponsor.link"
+                                       target="_blank"
+                                       :title="sponsor.name">
+                                        <img :src="sponsor.logo" class="lazy max-h-[48px] w-auto " alt="">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="relative lg:mt-20 mt-10 lg:px-0 px-6">
+                            <img src="/images/mobile-sponsors-gradient3.png"
+                                 class="lg:hidden block absolute left-0 -top-24 w-full mix-blend-color-dodge" alt="">
+
+                            <div class="relative z-10">
+                                <h3 class="text-xl text-sea-100 font-medium text-center">Altyapı Sponsorları</h3>
+                                <div class="lg:mt-6 mt-4 grid lg:grid-cols-3 grid-cols-1 gap-x-6 gap-y-4">
+                                    <a v-for="(sponsor, sponsorIndex) in sponsors.filter(s => s.category === 'Altyapı')"
                                        :key="`sponsor-${sponsor.id}`"
                                        class="sponsor-card bg-white px-3" :href="sponsor.link"
                                        target="_blank"
