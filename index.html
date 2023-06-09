@@ -732,7 +732,26 @@
                                        class="sponsor-card bg-white px-3" :href="sponsor.link"
                                        target="_blank"
                                        :title="sponsor.name">
-                                        <img :src="sponsor.logo" class="lazy max-h-[48px] w-auto " alt="">
+                                        <img :src="sponsor.logo" class="lazy max-h-[80px] w-auto " alt="">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="relative lg:mt-20 mt-10 lg:px-0 px-6">
+                            <img src="/images/mobile-sponsors-gradient2.png"
+                                 class="lg:hidden block absolute left-0 -top-24 w-full mix-blend-color-dodge" alt="">
+
+                            <div class="relative z-10">
+                                <h3 class="text-xl text-sea-100 font-medium text-center">Platin Sponsorlar</h3>
+                                <div class="lg:mt-6 mt-5 grid lg:grid-cols-4 grid-col-1 gap-x-6 gap-y-4">
+                                    <a v-for="(sponsor, sponsorIndex) in sponsors.filter(s => s.category === 'Platin')"
+                                       :key="`sponsor-${sponsor.id}`"
+                                       class="sponsor-card bg-white px-3"
+                                       :href="sponsor.link"
+                                       target="_blank"
+                                       :title="sponsor.name">
+                                        <img :src="sponsor.logo" class="lazy max-h-[80px] w-auto " alt="">
                                     </a>
                                 </div>
                             </div>
@@ -749,25 +768,7 @@
                                        class="sponsor-card bg-white px-3" :href="sponsor.link"
                                        target="_blank"
                                        :title="sponsor.name">
-                                        <img :src="sponsor.logo" class="lazy max-h-[48px] w-auto " alt="">
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="relative lg:mt-20 mt-10 lg:px-0 px-6">
-                            <img src="/images/mobile-sponsors-gradient2.png"
-                                 class="lg:hidden block absolute left-0 -top-24 w-full mix-blend-color-dodge" alt="">
-
-                            <div class="relative z-10">
-                                <h3 class="text-xl text-sea-100 font-medium text-center">Platin Sponsorlar</h3>
-                                <div class="lg:mt-6 mt-5 grid lg:grid-cols-4 grid-col-1 gap-x-6 gap-y-4">
-                                    <a v-for="(sponsor, sponsorIndex) in sponsors.filter(s => s.category === 'Platin')"
-                                       :key="`sponsor-${sponsor.id}`"
-                                       class="sponsor-card bg-white px-3"
-                                       :href="sponsor.link"
-                                       target="_blank"
-                                       :title="sponsor.name">
-                                        <img :src="sponsor.logo" class="lazy max-h-[48px] w-auto " alt="">
+                                        <img :src="sponsor.logo" class="lazy max-h-[80px] w-auto " alt="">
                                     </a>
                                 </div>
                             </div>
@@ -784,7 +785,7 @@
                                        class="sponsor-card bg-white px-3" :href="sponsor.link"
                                        target="_blank"
                                        :title="sponsor.name">
-                                        <img :src="sponsor.logo" class="lazy max-h-[48px] w-auto " alt="">
+                                        <img :src="sponsor.logo" class="lazy max-h-[80px] w-auto " alt="">
                                     </a>
                                 </div>
                             </div>
@@ -801,7 +802,7 @@
                                        class="sponsor-card bg-white px-3" :href="sponsor.link"
                                        target="_blank"
                                        :title="sponsor.name">
-                                        <img :src="sponsor.logo" class="lazy max-h-[48px] w-auto " alt="">
+                                        <img :src="sponsor.logo" class="lazy max-h-[80px] w-auto " alt="">
                                     </a>
                                 </div>
                             </div>
@@ -818,7 +819,7 @@
                                        class="sponsor-card bg-white px-3" :href="sponsor.link"
                                        target="_blank"
                                        :title="sponsor.name">
-                                        <img :src="sponsor.logo" class="lazy max-h-[48px] w-auto " alt="">
+                                        <img :src="sponsor.logo" class="lazy max-h-[80px] w-auto " alt="">
                                     </a>
                                 </div>
                             </div>
