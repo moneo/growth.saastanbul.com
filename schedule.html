@@ -302,11 +302,13 @@
                                     <div class="title">
                                         {{talk.title}}
                                     </div>
-                                    <div v-if="talk.speakers.length > 0" class="speaker-box px-8">
-                                        <img :src="getSpeaker(talk.speakers[0]).avatar" class="avatar lazy" alt="">
-                                        <div>
-                                            <span class="font-medium">{{getSpeaker(talk.speakers[0]).name}}</span>
-                                            ({{getSpeaker(talk.speakers[0]).title}})
+                                    <div v-if="talk.speakers.length > 0" class="py-2">
+                                        <div v-for="speaker in talk.speakers" class="speaker-box py-2" :key="speaker">
+                                            <img :src="getSpeaker(speaker).avatar" class="avatar lazy" alt="">
+                                            <div>
+                                                <span class="font-medium">{{getSpeaker(speaker).name}}</span>
+                                                ({{getSpeaker(speaker).title}})
+                                            </div>
                                         </div>
                                     </div>
                                     <div v-if="talk.key === 1306 || talk.key === 1314" class="speaker-box px-8 text-blue-500 text-sm font-normal">
