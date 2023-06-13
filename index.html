@@ -729,7 +729,7 @@
                                 <div class="lg:mt-6 mt-4 grid lg:grid-cols-3 grid-cols-1 gap-x-6 gap-y-4">
                                     <a v-for="(sponsor, sponsorIndex) in sponsors.filter(s => s.category === 'Elmas')"
                                        :key="`sponsor-${sponsor.id}`"
-                                       class="sponsor-card bg-white px-3" :href="sponsor.link"
+                                       class="sponsor-card bg-white px-3 py-8" :href="sponsor.link"
                                        target="_blank"
                                        :title="sponsor.name">
                                         <img :src="sponsor.logo" class="lazy max-h-[80px] w-auto " alt="">
@@ -747,11 +747,11 @@
                                 <div class="lg:mt-6 mt-5 grid lg:grid-cols-4 grid-col-1 gap-x-6 gap-y-4">
                                     <a v-for="(sponsor, sponsorIndex) in sponsors.filter(s => s.category === 'Platin')"
                                        :key="`sponsor-${sponsor.id}`"
-                                       class="sponsor-card bg-white px-3"
+                                       class="sponsor-card bg-white px-3 py-6"
                                        :href="sponsor.link"
                                        target="_blank"
                                        :title="sponsor.name">
-                                        <img :src="sponsor.logo" class="lazy max-h-[80px] w-auto " alt="">
+                                        <img :src="sponsor.logo" class="lazy max-h-[74px] w-auto " alt="">
                                     </a>
                                 </div>
                             </div>
@@ -762,13 +762,13 @@
 
                             <div class="relative z-10">
                                 <h3 class="text-xl text-sea-100 font-medium text-center">Altın Sponsorlar</h3>
-                                <div class="lg:mt-6 mt-4 grid lg:grid-cols-3 grid-cols-1 gap-x-6 gap-y-4">
+                                <div class="lg:mt-6 mt-4 grid lg:grid-cols-5 grid-cols-1 gap-x-6 gap-y-4">
                                     <a v-for="(sponsor, sponsorIndex) in sponsors.filter(s => s.category === 'Altın')"
                                        :key="`sponsor-${sponsor.id}`"
-                                       class="sponsor-card bg-white px-3" :href="sponsor.link"
+                                       class="sponsor-card bg-white px-2 py-4" :href="sponsor.link"
                                        target="_blank"
                                        :title="sponsor.name">
-                                        <img :src="sponsor.logo" class="lazy max-h-[80px] w-auto " alt="">
+                                        <img :src="sponsor.logo" class="lazy max-h-[68px] w-auto " alt="">
                                     </a>
                                 </div>
                             </div>
@@ -796,13 +796,13 @@
 
                             <div class="relative z-10">
                                 <h3 class="text-xl text-sea-100 font-medium text-center">Tanıtım Sponsorları</h3>
-                                <div class="lg:mt-6 mt-4 grid lg:grid-cols-3 grid-cols-1 gap-x-6 gap-y-4">
+                                <div class="lg:mt-6 mt-4 grid lg:grid-cols-6 grid-cols-1 gap-x-6 gap-y-4">
                                     <a v-for="(sponsor, sponsorIndex) in sponsors.filter(s => s.category === 'Tanıtım')"
                                        :key="`sponsor-${sponsor.id}`"
-                                       class="sponsor-card bg-white px-3" :href="sponsor.link"
+                                       class="sponsor-card bg-white px-1 py-4" :href="sponsor.link"
                                        target="_blank"
                                        :title="sponsor.name">
-                                        <img :src="sponsor.logo" class="lazy max-h-[80px] w-auto " alt="">
+                                        <img :src="sponsor.logo" class="lazy max-h-[62px] w-auto " alt="">
                                     </a>
                                 </div>
                             </div>
@@ -813,13 +813,13 @@
 
                             <div class="relative z-10">
                                 <h3 class="text-xl text-sea-100 font-medium text-center">Altyapı Sponsorları</h3>
-                                <div class="lg:mt-6 mt-4 grid lg:grid-cols-3 grid-cols-1 gap-x-6 gap-y-4">
+                                <div class="lg:mt-6 mt-4 grid lg:grid-cols-6 grid-cols-1 gap-x-6 gap-y-4">
                                     <a v-for="(sponsor, sponsorIndex) in sponsors.filter(s => s.category === 'Altyapı')"
                                        :key="`sponsor-${sponsor.id}`"
-                                       class="sponsor-card bg-white px-3" :href="sponsor.link"
+                                       class="sponsor-card bg-white px-1 py-4" :href="sponsor.link"
                                        target="_blank"
                                        :title="sponsor.name">
-                                        <img :src="sponsor.logo" class="lazy max-h-[80px] w-auto " alt="">
+                                        <img :src="sponsor.logo" class="lazy max-h-[56px] w-auto " alt="">
                                     </a>
                                 </div>
                             </div>
