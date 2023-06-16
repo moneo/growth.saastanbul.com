@@ -194,6 +194,27 @@
                 @apply flex items-center lg:text-lg text-base lg:text-main-900 text-azul-500 font-medium tracking-secondary even:text-main-700;
             }
 
+            .schedule-time-box {
+                @apply left-[-150px] top-0 z-10
+            }
+
+            @media screen and (min-width: 1000px) and (max-width: 1500px) {
+                .schedule-time-box {
+                    border-radius: 20px;
+                    padding: 1px 10px;
+                    left: -10px;
+                    top: -10px;
+                    align-items: flex-start;
+                    justify-content: flex-start;
+                    height: auto !important;
+                    background: linear-gradient(0deg, rgb(8, 14, 29), rgb(8, 14, 29));
+                }
+                .schedule-time-box .schedule-time {
+                    font-size: 14px;
+                    color: #fff;
+                }
+            }
+
             .tweet-card {
                 @apply p-6 bg-white border border-azul-100 rounded-2xl lg:max-w-[344px] max-w-[278px] flex-shrink-0;
 
@@ -490,7 +511,7 @@
 
                             <div v-for="(session, sessionIndex) in sessions.slice(0,5)" :key="`talk-${sessionIndex}`"
                                  class="relative col-span-12 grid grid-cols-12 gap-4">
-                                <div class="h-full flex items-center absolute left-[-150px] top-0 z-10">
+                                <div class="h-full flex items-center absolute schedule-time-box">
                                     <div class="schedule-time">
                                         {{session.start}} - {{session.end}}
                                     </div>
